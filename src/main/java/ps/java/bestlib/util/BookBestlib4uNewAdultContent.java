@@ -1,0 +1,32 @@
+package ps.java.bestlib.util;
+
+import org.jsoup.nodes.Document;
+
+public class BookBestlib4uNewAdultContent implements BookContent {
+
+    private final String bookId;
+
+    private final int pageCount;
+
+    public BookBestlib4uNewAdultContent(final String bookId, final int pageCount) {
+        this.bookId = bookId;
+        this.pageCount = pageCount;
+    }
+
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    public String extractContent(final Document doc) {
+        return doc.select("div.text").html();
+    }
+
+    public String composeURL(final int pageNumber) {
+        if (pageNumber <= 1) {
+            return "http://www.bestlib4u.net/newadult/" + bookId + "/";
+        }
+
+        return "http://www.bestlib4u.net/newadult/" + bookId + "/index_" + pageNumber + ".html";
+    }
+
+}
