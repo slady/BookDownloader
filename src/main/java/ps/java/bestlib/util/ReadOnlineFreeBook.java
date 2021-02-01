@@ -25,7 +25,7 @@ public class ReadOnlineFreeBook implements BookContent {
 
 	@Override
 	public String extractContent(final Document doc) {
-		return doc.select("chapterContent").html();
+		return doc.select("div.chapterContent").html();
 	}
 
 }

@@ -29,7 +29,7 @@ public class FreeBestBooks implements BookContent {
 
 	@Override
 	public String extractContent(final Document doc) {
-		return doc.select("text").html();
+		return doc.select("div.text").html();
 	}
 
 }

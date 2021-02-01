@@ -8,7 +8,7 @@ import java.io.IOException;
 public class ElleKennedyTheScore2 {
 
 	public static void main(String[] args) throws IOException {
-		BookDownloader.downloadBook("Elle-Kennedy-The-Deal",
+		BookDownloader.downloadBook("Elle-Kennedy-The-Score-2",
 			new FreeBestBooks(4709, 77));
 	}
 
